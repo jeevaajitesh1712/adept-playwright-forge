@@ -2,56 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Executive Minimalist Luxury Color Palette */
 
 @layer base {
   :root {
-    /* AdeptAssure brand colors - Deep Indigo palette */
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    /* Primary Dark Background - Onyx Black #121212 */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 90%;
     
-    /* Surface & Cards */
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    /* Secondary Surface / Cards - Platinum #E5E5E5 */
+    --card: 0 0% 90%;
+    --card-foreground: 0 0% 7%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0 0% 90%;
+    --popover-foreground: 0 0% 7%;
     
-    /* Primary - Deep Indigo #1E3A8A */
-    --primary: 221 64% 33%;
+    /* Primary Accent - Deep Violet #6A0DAD */
+    --primary: 276 92% 37%;
     --primary-foreground: 0 0% 100%;
     
-    /* Primary CTA - Bright Blue #2563EB */
-    --primary-cta: 217 91% 60%;
-    --primary-cta-foreground: 0 0% 100%;
+    /* Secondary Accent - Soft Lilac #E0C3FC */
+    --secondary: 270 88% 88%;
+    --secondary-foreground: 276 92% 37%;
     
-    /* Primary Light - Very Light Indigo #EEF2FF */
-    --primary-light: 227 100% 97%;
+    /* Muted - Warm Gray #9B9B9B */
+    --muted: 0 0% 61%;
+    --muted-foreground: 0 0% 40%;
     
-    /* Secondary - Outline variant */
-    --secondary: 227 100% 97%;
-    --secondary-foreground: 221 64% 33%;
+    /* Accent - Soft Lilac */
+    --accent: 270 88% 88%;
+    --accent-foreground: 276 92% 37%;
     
-    /* Muted backgrounds */
-    --muted: 227 100% 97%;
-    --muted-foreground: 215 16% 47%;
-    
-    /* Accent */
-    --accent: 227 100% 97%;
-    --accent-foreground: 221 64% 33%;
-    
-    /* Danger - Rose */
-    --destructive: 350 89% 60%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Borders and inputs */
-    --border: 221 39% 90%;
-    --input: 221 39% 90%;
-    --ring: 217 91% 60%;
+    /* Borders - Warm Gray */
+    --border: 0 0% 61%;
+    --input: 0 0% 80%;
+    --ring: 276 92% 37%;
     
-    --radius: 1rem;
+    --radius: 0.75rem;
     
     /* Status colors */
     --success: 142 71% 45%;
@@ -60,50 +51,43 @@ All colors MUST be HSL.
     --warning-foreground: 0 0% 100%;
     --info: 199 89% 48%;
     --info-foreground: 0 0% 100%;
+    
+    /* Custom luxury colors */
+    --onyx: 0 0% 7%;
+    --platinum: 0 0% 90%;
+    --violet: 276 92% 37%;
+    --lilac: 270 88% 88%;
+    --warm-gray: 0 0% 61%;
   }
 
   .dark {
-    /* Dark mode - Slate/Indigo equivalents */
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 90%;
     
-    --card: 217 33% 17%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 90%;
+    --card-foreground: 0 0% 7%;
     
-    --popover: 217 33% 17%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 90%;
+    --popover-foreground: 0 0% 7%;
     
-    /* Primary in dark - lighter for contrast */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 276 92% 37%;
+    --primary-foreground: 0 0% 100%;
     
-    --primary-cta: 217 91% 60%;
-    --primary-cta-foreground: 222 47% 11%;
+    --secondary: 270 88% 88%;
+    --secondary-foreground: 276 92% 37%;
     
-    --primary-light: 217 33% 17%;
+    --muted: 0 0% 61%;
+    --muted-foreground: 0 0% 40%;
     
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --accent: 270 88% 88%;
+    --accent-foreground: 276 92% 37%;
     
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
-    
-    --destructive: 350 89% 60%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 217 33% 24%;
-    --input: 217 33% 24%;
-    --ring: 217 91% 60%;
-    
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
-    --info: 199 89% 48%;
-    --info-foreground: 0 0% 100%;
+    --border: 0 0% 61%;
+    --input: 0 0% 80%;
+    --ring: 276 92% 37%;
   }
 }
 
@@ -122,14 +106,29 @@ All colors MUST be HSL.
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  
-  h2 {
     @apply text-3xl md:text-4xl;
   }
   
-  h3 {
+  h2 {
     @apply text-2xl md:text-3xl;
   }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+/* Custom scrollbar for code editor */
+.code-editor::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-editor::-webkit-scrollbar-track {
+  background: hsl(var(--onyx));
+}
+
+.code-editor::-webkit-scrollbar-thumb {
+  background: hsl(var(--warm-gray));
+  border-radius: 4px;
 }
